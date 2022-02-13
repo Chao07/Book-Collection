@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :user_collections
+  resources :users
   root 'books#index'
 
   resources :books do
@@ -6,11 +8,7 @@ Rails.application.routes.draw do
       get :delete
     end
   end
-  resources :pages do
-    member do
-      get :delete
-    end
-  end
+  
   #get 'delete'=> 'books#delete', as: "delete"
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
