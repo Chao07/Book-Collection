@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   resources :user_collections
   resources :users
+  resources :books
+  
   root 'user_collections#index'
   #root 'books#index'
 
