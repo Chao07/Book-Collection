@@ -4,6 +4,8 @@ class UserCollectionsController < ApplicationController
   # GET /user_collections or /user_collections.json
   def index
     @user_collections = UserCollection.all
+    @users = User.all
+    @books = Book.all
   end
 
   # GET /user_collections/1 or /user_collections/1.json
